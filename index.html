@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8">
+<script>
+        !function(e,t,n){
+            e.yektanetAnalyticsObject=n,
+            e[n]=e[n]||function(){e[n].q.push(arguments)},
+            e[n].q=e[n].q||[];
+            var a=t.getElementsByTagName("head")[0],
+                r=new Date,
+                c="https://cdn.yektanet.com/superscript-v2/pCBmjoQR/native-48757/yn_pub.js?v="
+                    +r.getFullYear().toString()+"0"+r.getMonth()+"0"+r.getDate()+"0"+r.getHours(),
+                s=t.createElement("link");
+            s.rel="preload",
+            s.as="script",
+            s.href=c,
+            a.appendChild(s);
+            var l=t.createElement("script");
+            l.async=!0,
+            l.src=c,
+            a.appendChild(l);
+        }(window,document,"yektanet");
+        </script>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#5ec3ff"><script src="https://developer.eitaa.com/eitaa-web-app.js"></script><title>واژه‌گردون | بازی کلمات</title><style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none;touch-action:none}
+html,body{margin:0;height:100%;height:100dvh;background:#2a1208;font-family:Tahoma,sans-serif;color:#fff;overflow:hidden}
+#app{position:relative;z-index:1;max-width:480px;height:100%;margin:auto;display:flex;flex-direction:column;align-items:center;padding-bottom:env(safe-area-inset-bottom)}
+#top{width:100%;display:flex;justify-content:space-between;align-items:center;padding:10px 12px;font-weight:bold}
+#coin{background:#00000066;border-radius:20px;padding:4px 12px;color:#ffd35a}
+#lv{font-size:16px}
+#slots{flex:1;width:100%;display:flex;flex-wrap:wrap;justify-content:center;align-content:center;gap:7px 12px;padding:0 10px;overflow:hidden}
+.w{display:flex;direction:rtl;gap:3px}
+.c{width:30px;height:30px;border-radius:7px;background:#00000066;border:2px solid #b8733c;display:flex;align-items:center;justify-content:center;font:bold 18px Tahoma;color:#ffd35a}
+.c.on{background:#6b2f10;animation:pop .25s}
+@keyframes pop{50%{transform:scale(1.25)}}
+#tag{height:34px;min-width:60px;margin:6px;padding:2px 16px;border-radius:12px;background:#2e9d4f;font:bold 20px Tahoma;opacity:0}
+#tag.on{opacity:1}#tag.bad{background:#c0392b;animation:sh .3s}
+@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+#plate{position:relative;border-radius:50%;background:radial-gradient(circle,#8d8d95,#4b4b55);border:6px solid #b8b8c0;box-shadow:0 6px 20px #000a}
+#plate svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.l{position:absolute;width:52px;height:52px;margin:-26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:bold 32px Tahoma;color:#ffd35a;text-shadow:0 2px 3px #000}
+.l.s{background:#ffd35a;color:#5a2a0c;text-shadow:none}
+#bar{display:flex;gap:14px;margin:12px}
+button{font:bold 14px Tahoma;border:0;border-radius:14px;padding:10px 18px;background:linear-gradient(#ffb347,#e0782a);color:#3a1a05;touch-action:manipulation}
+#ad{min-height:50px;width:100%;text-align:center}
+#ov{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:9}
+#ov.on{display:flex}
+#box{background:linear-gradient(#ffe8b0,#e9bd6c);color:#4a2208;border-radius:20px;padding:22px 26px;text-align:center;width:82%;max-width:340px;animation:pop .3s}
+#box h2{margin:0 0 8px}#box .st{font-size:34px}
+#t{position:fixed;top:60px;left:50%;transform:translateX(-50%);background:#fff;color:#111;padding:7px 14px;border-radius:10px;font-size:13px;opacity:0;transition:.2s;pointer-events:none;z-index:10}#t.on{opacity:1}
+#sc{position:fixed;inset:0;z-index:0;overflow:hidden}
+#gr{position:absolute;left:0;right:0;bottom:0;height:52%;background:linear-gradient(#d3a566,#7a4a22);border-radius:50% 50% 0 0/14px 14px 0 0}
+#lm{position:absolute;left:50%;transform:translateX(-50%);width:100%;max-width:520px;bottom:50%;height:34%}#lm svg{width:100%;height:100%}
+.sun{position:absolute;top:64px;right:20px;width:64px;height:64px;border-radius:50%;background:#ffd34a;box-shadow:0 0 34px #ffd34a;font-size:38px;line-height:64px;text-align:center;animation:gl 3s infinite alternate}
+.night .sun{background:#e8ecff;box-shadow:0 0 30px #aab8ff}
+@keyframes gl{to{transform:scale(1.1)}}
+.cl{position:absolute;width:90px;height:28px;background:#fff;border-radius:28px;opacity:.92;animation:dr 45s linear infinite}
+.cl:before,.cl:after{content:"";position:absolute;background:#fff;border-radius:50%}.cl:before{width:44px;height:44px;left:12px;top:-22px}.cl:after{width:34px;height:34px;left:46px;top:-14px}
+.night .cl{opacity:.25}
+@keyframes dr{from{transform:translateX(-140px)}to{transform:translateX(110vw)}}
+.bd{position:absolute;font-size:22px;animation:dr 22s linear infinite}
+#st i{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;animation:tw 2s infinite alternate;display:none}.night #st i{display:block}
+@keyframes tw{from{opacity:.2}to{opacity:1}}
+.bl{animation:tw .8s infinite alternate}
+#sn{position:absolute;top:50px;left:50%;transform:translateX(-50%);background:#0007;color:#fff;font-size:12px;padding:2px 12px;border-radius:10px;white-space:nowrap}
+</style></head><body>
+<div id="sc"><div id="st"></div><div class="sun"></div><div class="cl" style="top:110px"></div><div class="cl" style="top:190px;animation-delay:-22s"></div><div class="bd" style="top:150px;animation-delay:-8s">🕊️</div><div class="bd" style="top:230px;animation-duration:30s">🕊️</div><div id="lm"></div><div id="gr"></div><div id="sn"></div></div>
+<div id="app"><div id="top"><div id="coin">🪙 <span id="cn">0</span></div><div id="lv"></div></div>
+<div id="slots"></div><div id="tag"></div><div id="plate"><svg><polyline id="ln" fill="none" stroke="#ffd35a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/></svg></div>
+<div id="bar"><button id="hint">💡 راهنما ۴۵🪙</button><button id="shuf">🔀 جابجا</button></div>
+<div id="ad"></div></div>
+<!-- محل ویجت تبلیغاتی ایتا: کد ویجت را داخل div با id=ad بگذارید -->
+<div id="ov"><div id="box"></div></div><div id="t"></div>
+<script>
+const LV="جای|ای یا جا;یخر|خر یخ رخ;آهن|نه آن آهن;مان|ما نام امن;پرس|پر سر پسر;دهر|ده در هر;سبزی|بی سبز سیب;دلبر|لب بد برد;باز|با از باز;نمکی|کم یک نمک;پاس|پس پا پاس;سوار|رو را ور;مسی|مس سیم مسی;کتاب|تا تب تاب;خرما|امر مار خار;بهار|بر ابر بار;مسها|هم ماه اسم;چهار|چه چار چاه;دمو|دم دو مو;اسبی|بس یاس اسب;رسید|دیر سیر درس;دنیا|دان یاد دین;قفلی|فیل قفل;گلیم|گل گلی میل;دفتر|تر فرد رفت;تنور|نو تو نور;زنگی|زن زنگ نیز;هنر|هنر نهر;خواب|او خوب;سلام|مال سال;بومی|بیم موی بوم;پدری|پدر پیر;شهاب|شب شاه;دلی|دل دلی;خطی|خط خطی;گنجی|جنگ گنج;تخمی|تخم میخ;شادی|شد شاد;چنگی|چین چنگ;کمدی|کمد دمی;غمن|من غم;پلی|پل پلی;راست|ترس تار;آبی|آب آبی;ریشه|شیر شهر;گردو|گرد رود;چتری|تیر چتر;فکر|فکر;جامی|جام;خرمای|یار خرما ماری;نرگس|رنگ سنگ نرگس;خنکا|خنک خاک کاخ;حالس|حس حال ساحل;کوهن|کوه کهن نوک;زبانی|زیبا بازی زبان;مددا|داد دام مداد;سبدت|دست بست سبد;گفتن|تنگ گفتن تفنگ;درسها|سرد دار دره;میخها|ماهی خیمه یخها;رمزد|رمز مرز مرد زرد;پنجره|پنج پنجه;رادیو|دریا رودی رویا;خوشم|خوش موش خشم;لباسی|بال ایل سبیل اسبی;قویر|ورق قوی ورقی;دکانی|نیک دنیا دکان;چمنی|چمن چمنی;درختی|خرد دختر درخت;جوانی|اوج جان جوان;توپها|هوا تپه توپ;صبرش|بشر صبر;چراغی|غار چراغ غاری;قلمها|قله قلم;انگور|اگر گاو روان;ریشه|شهری ریشه;خاصد|خاص صدا خدا;نسییم|نسیم سینی سیمی;ددزو|دود زود دزد;کفشی|کفش کیف کفشی;کارش|کار شکر اشک;عقابی|قاب عقاب قابی;زخمی|زخم میز;همسفر|مهر سفره;دشتی|دشت دشتی;شهابی|شبی شبها شهاب;درسی|رسید درسی;پیروز|روز روزی;ننای|نان نانی;مشتی|مشت مشتی;ککبی|کبک کبکی;مادری|مادر دامی مردی;گوشتی|گوش گوشت گوشی;نرمگ|گرم نرم;موجها|موج موها;مرغی|مرغ مرغی;نخلها|نخل خانه لانه;هلوی|هلو هلوی;بیدار|باد بادی ابری;نمکیا|کمان نمکی کمانی;عکسیل|عسل عکس عکسی عسلی;جامیب|جیب بام بامی جامی;چشمهک|چشم مشک چکمه چشمه;دییوار|رویای دریای رادیو دیوار;خیااره|خاری خیار خارها;آهویا|آهو هوای آهوی;برفیش|برف فرش فرشی برفی;زمینها|ناز زمان زمین میزها;دوستی|دوست دستی دوستی;هویجم|موجی هویج میوه;مسجدها|دمها مسجد جاده مسها;جنگلها|گلها جهان جنگل گنجها;کوسهها|کاسه کوسه کوهها;شانهد|شانه دانه دانش;غذایب|غذا باغ باغی غذای;حرفوش|حرف شور روح;ددعای|عدد دعا عید;سرنوشت|ستون نشست تنور روشن;آرامد|آرد آمد آرام;تخمیی|یخی میخی تخمی;ططوین|وطن وطنی طوطی;تتخها|تخت تخته تختها;قلمیب|قلب قلمی قلبی;پوستی|پوست توپی پوستی;انگوری|نوری گاری گاوی رنگی انگور;ددینر|درد دیدن دردی;تازهر|راز تازه هزار;تنورها|توان تنها ترانه نورها;پختلو|پخت تلخ پول;سقفیل|سقف سقفی قفلی;ههمیش|همه همیشه;عشقان|عشق نقاش عاشق;گلیمس|مگس گلیم مگسی;دشمنی|شنید دشمن دشمنی;قصریه|قصر قصه قصری;خوابن|خون خوان خواب;علمرش|عمر علم شمع;پردهها|پرده پدرها درهها;صبحیل|صبح صلح صبحی;درختی|درختی دختری;خاکیش|خشک خاکی اشکی;دلقکی|دلقک کلید دلقکی;گنجشکی|جشن گنجی گنجشک;مییزن|میزی زمینی;سسپاک|پاک سپاس;سیینها|یاسی سایه;ذرهاب|ذره بهار;چوبیم|چوب بومی چوبی;تفنگی|گفت تفنگی;ماارهد|مارها مردها دامها مادرها;بالشیس|لباس بالش بالشی لباسی;شلغمیو|موشی لیمو شلغم شلغمی;دریچهها|چهار هدیه دایره دریچه;طنابیل|طلا طناب طنابی;ممیونها|مهم میهن مهمان میمون مهمانی;لبخندها|بند دلها خنده نخلها لبخند;تیرهاس|هستی راست تیرها ستاره;ککودیم|کمک کودک کمدی کودکی;ااتقیو|وقت اتاق اتاقی;پشههات|پشت پشه تپهها پشهها;خرگوشها|شاخه خوشه خرگوش گوشها;دفترها|هدف فردا دفتر دفترها;آتشبازی|زشت آتش تیز آتشی;ثوابرس|ارث ثواب سوار;جاامهت|تاج تاجها جامها;زنگهای|گیاه زنگی نیزه زنگها;عسلهاک|کلاه عکسها عسلها;ساعتیم|ساعت ماست ساعتی ماستی;مههتااب|بامها مهتاب ماهها ماهتاب;چترییش|تیری شیری چتری;نمودتل|تند تولد نمود;ددرهاو|رودها دردها دودها;گردویل|گردو دلیر گردوی;میداانه|دانا ایمان میدان;آسیاابه|آبها اسبها یاسها سیبها آسیاب;قنااریه|نهری انار قناری اناری;کتریاب|کتاب کتری کتابی;جوانیل|جلو جوانی لیوان;آزادیو|آزاد آواز آزادی;شبنمیا|شبنم ماشین شبنمی;فییلکد|کیفی فیلی کلیدی;شاعریه|شاعر شیرها شاعری;سییبلد|سیبی سبدی سبیلی;گیلاسب|گلاب گلابی گیلاس;سنگهار|رنگها سنگها نرگسها;ببللها|بلبل لاله بلبلها;پنجرهها|پنجره نهرها پنجهها;صحرایل|اصل صحرا صحرای;حوضهای|حوض حوضی حوضها;جورابی|جواب جوراب جورابی;ننگییس|سنگی نگین نگینی;غاارهب|غارها باغها ابرها;قلههاو|قهوه قلهها هلوها;قفلهای|قالی فیلها قفلها;لحافین|لحن لحاف لحافی;کوزهها|کوزه کوزهها;کوهستان|کوتاه نوکها ستونها;حییاطر|طرح حیاط حیاطی;وااژهه|واژه هواها واژهها;آبادیرش|شادی بیدار آبادی آبشار آبشاری;نقااشهه|نقشه شاهها شانهها نقاشها نقشهها;گندمیال|گندم گندمی گلدان گلدانی;دستهااب|سبدها دستها استاد بادها;زنبوریت|زیتون تنوری زنبور زنبوری;خروسیتت|سخت توت خروس تختی خروسی;گلیمهاس|سلام مگسها سیمها گلیمها;پیادهرس|پدری پسری درسها پیاده پسرها;عروسیام|عروس عروسی سماور سماوری;فرشتهها|فرشته فرشها شهرها فرشتهها;ییخچالر|چرخ یخچال خیاری یخچالی;مهربانک|مبارک همکار نمکها مهربان;غروبهام|غروب مرغها بومها غروبها;قاابهلی|قابها قلبها قالیها;خرماایه|میخها خرمای خرماها خیارها;رویااهد|رویاها دریاها دیوارها رادیوها;سفرههام|همسفر همراه مسافر سفرهها;نسییمها|نسیمی سینیها نسیمها;خوابیتل|بخت تابلو خوابی تابلوی;پیروزات|پرواز پیروز ترازو ترازوی;کبوترین|نوکی کبوتر کبوتری;سنجاابی|سنجاب اینجا سنجابی;فننجایر|نارنج فنجان فنجانی نارنجی;کفشهاای|کیفها کفشها اشکها;چننگهای|چنگی چنگها نگینها;تمااشهو|تماشا موشها مشتها;پاکدلهی|پلها پاکدل کلیدها;طاووسیل|طول طاووس طاووسی;ققااییه|قایق قایقی قایقها;کلبههاا|کلبه کلاهها کلبهها;سفینهدم|سفید سفینه مهندس;ننردبااه|باران نانها راننده نردبان;زنبیلها|زبانی زنبیل زنبیلها;دلقکهام|کمدها قلمها دلقکها;سوغاتین|سوغات ستونی سوغاتی;سربلندک|کردن دلبر سربلند;پایییزب|پاییز پاییزی زیبایی;آسمانیه|آینه آسمان آسمانی;باازیگر|بزرگ بازار بازیگر;آتشهانن|نشان آشنا آتشها;انگشتیو|انگشت گوشتی انگشتی;ههویجان|یونجه هویجها یونجهها;شلواریت|تلاش شلوار شلواری;صندلیها|صدای صندلی صندلیها;چکمههاو|کوچه چکمهها کوچهها;ههمساای|سایهها همسایه ماهیها;باادمیر|بادام مادری بادامی;ددننایو|دودی دندان دندانی;برفههاگ|گربه برفها گربهها;سبزیهال|سبزی سبزیها سبیلها;پرچمیاه|پرچم پرچمی پرچمها;تلفنیاه|تلفن تلفنی تلفنها;فانوسیر|فانوس فارسی فانوسی;پرندهها|پرنده پردهها پرندهها;کلااغهی|کلاغ کلاغی کلاغها;توپهاسر|توپها پرستو پوستها;جعبههام|جمع جعبه جعبهها;خاانههد|خانهها دانهها خندهها;غنچههاا|غنچه چاهها غنچهها;رادییول|دلاور رادیوی دیواری;ججوههام|جوجه موجها جوجهها;شههاابی|شهابی شهابها;عیینکاه|عینک عینکی عینکها;خییاابن|خیابان خیابانی;کااسههو|کوسهها کاسهها;ککبهاات|کبکها کتابها;سااحلهی|ساحلی ساحلها;گلییموا|گلیمی لیموی;گردوهاا|گاوها گردوها;دخترهام|تخمها درختها دخترها;صبحهاار|صبحها صحراها;مزرعهها|مزرعه مزرعهها;انگوریس|نرگسی انگوری;لبخندیا|نخلی لبخندی;سرنوشتک|شکست سرنوشت;کماانهر|راهنما کمانها;ممدرسها|مردم مدرسه;خیمههاو|خیمهها میوهها;للااههن|لالهها لانهها;خرگووشی|خوشرو خرگوشی;زنبورها|روزها زنبورها;صخرههاا|صخره صخرهها;مسجدیاه|مسجدی مسجدها;خوشههاا|شاخهها خوشهها;عقاابهی|عقابی عقابها;شییرنام|شیرین ماشینی;قهرمانو|ورقها قهرمان;خواابهک|خاکها خوابها;جزیرهها|جزیره جزیرهها;جنگلیاه|جنگلی جنگلها;گیااههر|گاریها گیاهها;دوستهاش|دشتها دوستها;رییسمان|ریسمان ریسمانی;طناابهو|وطنها طنابها;دکاانهی|دکانی دکانها;بنفشهها|بنفشه بنفشهها;سااعتهم|ماستها ساعتها;پروانهی|پیراهن پروانه;شااعرهم|شمعها شاعرها;ننااودی|ناودان ناودانی;گلاابهش|گلابها بالشها".split(";").map(s=>{const[a,b]=s.split("|");return{l:[...a],w:b.split(" ")}});
+const cnt=0;
+const $=s=>document.querySelector(s),fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+const DAY=864e5,TODAY=Math.floor((Date.now()+12600000)/DAY);
+let S={lvl:1,coins:0,d:-1,s:0,found:[],rev:{}};
+try{Object.assign(S,JSON.parse(localStorage.getItem('mk')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('mk',JSON.stringify(S))}catch(e){}};
+function toast(m){const t=$('#t');t.textContent=m;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),1500)}
+function modal(h,btn,fn){$('#box').innerHTML=h+'<br><button id="ok">'+btn+'</button>';$('#ov').classList.add('on');$('#ok').onclick=()=>{$('#ov').classList.remove('on');fn&&fn()}}
+const SC=[{n:"🏛️ تخت جمشید",g:"#5ec3ff,#fff1b8",s:`<svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax meet"><g fill="#e6c07d" stroke="#8a5f2b" stroke-width="2"><polygon points="0,220 0,196 36,196 36,184 72,184 72,172 108,172 108,220"/><rect x="130" y="74" width="20" height="124" rx="3"/><rect x="125" y="62" width="30" height="14" rx="3"/><rect x="126" y="196" width="28" height="12" rx="2"/><rect x="175" y="74" width="20" height="124" rx="3"/><rect x="170" y="62" width="30" height="14" rx="3"/><rect x="171" y="196" width="28" height="12" rx="2"/><rect x="220" y="74" width="20" height="124" rx="3"/><rect x="215" y="62" width="30" height="14" rx="3"/><rect x="216" y="196" width="28" height="12" rx="2"/><rect x="265" y="74" width="20" height="124" rx="3"/><rect x="260" y="62" width="30" height="14" rx="3"/><rect x="261" y="196" width="28" height="12" rx="2"/><rect x="310" y="74" width="20" height="124" rx="3"/><rect x="305" y="62" width="30" height="14" rx="3"/><rect x="306" y="196" width="28" height="12" rx="2"/><rect x="118" y="44" width="228" height="16" rx="3"/><rect x="108" y="206" width="260" height="14"/></g></svg>`},{n:"🗼 برج آزادی",g:"#7fb2ff,#ffd9a0",s:`<svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax meet"><g fill="#f6eed6" stroke="#b7a476" stroke-width="2"><path d="M110 220L150 90Q200 20 250 90L290 220L250 220L228 125Q200 92 172 125L150 220Z"/><path d="M110 220L30 206L112 166Z"/><path d="M290 220L370 206L288 166Z"/><path d="M172 58Q200 6 228 58Z" fill="#2fb5c9"/><rect x="192" y="64" width="16" height="22" fill="#2fb5c9"/><rect x="60" y="212" width="280" height="8" fill="#d9ccaa"/></g></svg>`},{n:"🕌 حرم امام رضا (ع)",g:"#ff9a6b,#ffe3a3",s:`<svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax meet"><g stroke="#8a6a1c" stroke-width="2"><rect x="50" y="150" width="300" height="70" fill="#f3e4bd"/><rect x="150" y="100" width="100" height="52" fill="#ead7a0"/><path d="M146 102Q200 20 254 102Z" fill="#f5c542"/><path d="M200 44V22" stroke-width="3"/><circle cx="200" cy="19" r="5" fill="#f5c542"/><rect x="92" y="62" width="14" height="90" fill="#2fb5c9"/><rect x="294" y="62" width="14" height="90" fill="#2fb5c9"/><ellipse cx="99" cy="58" rx="9" ry="12" fill="#f5c542"/><ellipse cx="301" cy="58" rx="9" ry="12" fill="#f5c542"/><path d="M60 150Q80 112 100 150Z M300 150Q320 112 340 150Z" fill="#2fb5c9"/><g fill="#5a3a12"><rect x="76" y="176" width="22" height="44" rx="11"/><rect x="132" y="176" width="22" height="44" rx="11"/><rect x="189" y="176" width="22" height="44" rx="11"/><rect x="246" y="176" width="22" height="44" rx="11"/><rect x="302" y="176" width="22" height="44" rx="11"/></g></g></svg>`},{n:"📡 برج میلاد",g:"#0b1440,#4a3a8a",night:1,s:`<svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMax meet"><g stroke="#556" stroke-width="2"><path d="M188 220L195 112H205L212 220Z" fill="#aab4c6"/><ellipse cx="200" cy="100" rx="30" ry="15" fill="#d5dded"/><rect x="190" y="82" width="20" height="16" fill="#bfc9dd"/><rect x="197" y="26" width="6" height="58" fill="#cfd6e4"/><circle cx="200" cy="22" r="5" fill="#ff3b3b" class="bl"/></g><g fill="#ffe27a"><circle cx="185" cy="100" r="2.5"/><circle cx="200" cy="104" r="2.5"/><circle cx="215" cy="100" r="2.5"/></g></svg>`}];
+function setScene(){const c=SC[Math.floor((S.lvl-1)/10)%SC.length];$('#sc').style.background='linear-gradient(180deg,'+c.g+')';$('#sc').className=c.night?'night':'';$('#lm').innerHTML=c.s;$('#sn').textContent=c.n;$('.sun').textContent=c.night?'🌙':'😄';
+ $('#st').innerHTML=Array.from({length:18},()=>'<i style="left:'+Math.random()*100+'%;top:'+Math.random()*45+'%;animation-delay:'+Math.random()*3+'s"></i>').join('')}
+try{const w=window.Eitaa&&window.Eitaa.WebApp;if(w){w.ready();w.expand();if(w.disableVerticalSwipes)w.disableVerticalSwipes()}}catch(e){}
+let cur,letters,path=[],pos=[],R=0;
+const plate=$('#plate');
+function coins(){$('#cn').textContent=fa(S.coins)}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function build(){plate.querySelectorAll('.l').forEach(e=>e.remove());R=Math.min(290,innerWidth-24,innerHeight*.38);plate.style.width=plate.style.height=R+'px';
+ const n=letters.length,rad=R/2-42;pos=letters.map((c,i)=>{const a=-Math.PI/2+i*2*Math.PI/n;return [R/2-6+rad*Math.cos(a),R/2-6+rad*Math.sin(a)]});
+ letters.forEach((c,i)=>{const e=document.createElement('div');e.className='l';e.textContent=c;e.style.left=pos[i][0]+'px';e.style.top=pos[i][1]+'px';plate.appendChild(e)})}
+function slots(){const s=$('#slots');s.innerHTML='';cur.w.forEach(w=>{const r=document.createElement('div');r.className='w';const f=S.found.includes(w),v=S.rev[w]||0;
+ [...w].forEach((c,i)=>{const e=document.createElement('div');e.className='c'+(f||i<v?' on':'');e.textContent=f||i<v?c:'';r.appendChild(e)});s.appendChild(r)})}
+function load(){if(S.lvl>LV.length){modal('<h2>🏆 تبریک!</h2>همه مرحله‌ها را تمام کردی!<br>مرحله‌های جدید به‌زودی...','باشه');return}
+ cur=LV[S.lvl-1];setScene();letters=shuffle(cur.l.slice());$('#lv').textContent='مرحله '+fa(S.lvl)+' از '+fa(LV.length);coins();build();slots();$('#tag').classList.remove('on')}
+function done(){S.coins+=5;const ch=S.lvl%10==0;if(ch)S.coins+=25;const lv=S.lvl;S.lvl++;S.found=[];S.rev={};save();coins();
+ setTimeout(()=>modal(ch?'<h2>پایان فصل '+fa(lv/10)+'</h2><div class="st">⭐⭐⭐</div>جایزه فصل: +۲۵🪙 و +۵🪙':'<h2>پایان مرحله '+fa(lv)+'</h2><div class="st">🎉</div>تبریک! +۵🪙','ادامه',load),600)}
+function got(w,bonus){if(!S.found.includes(w))S.found.push(w);if(bonus)S.coins+=5;save();coins();slots();if(cur.w.every(x=>S.found.includes(x)))done()}
+function ptr(e){const r=plate.getBoundingClientRect();return [e.clientX-r.left-6,e.clientY-r.top-6]}
+function upd(p){const ls=plate.querySelectorAll('.l');ls.forEach((e,i)=>e.classList.toggle('s',path.includes(i)));
+ const pts=path.map(i=>pos[i].join(',')+' ').join('')+(p?p[0]+','+p[1]:'');$('#ln').setAttribute('points',pts);
+ const t=$('#tag');t.className=path.length?'on':'';t.textContent=path.map(i=>letters[i]).join('')}
+plate.onpointerdown=e=>{plate.setPointerCapture(e.pointerId);path=[];mv(e)};
+function mv(e){if(e.buttons===0&&e.pointerType==='mouse')return;const p=ptr(e);
+ for(let i=0;i<pos.length;i++){if(Math.hypot(p[0]-pos[i][0],p[1]-pos[i][1])<28){
+  if(path[path.length-2]===i)path.pop();else if(!path.includes(i))path.push(i);break}}
+ upd(p)}
+plate.onpointermove=e=>{if(path.length||e.buttons)mv(e)};
+plate.onpointerup=plate.onpointercancel=()=>{const w=path.map(i=>letters[i]).join('');const t=$('#tag');
+ if(w.length>1){if(S.found.includes(w))toast('این کلمه را قبلاً پیدا کردی');
+  else if(cur.w.includes(w)){got(w,1)}else{t.className='on bad'}}
+ path=[];setTimeout(()=>{upd(null);$('#ln').setAttribute('points','')},w.length>1&&!cur.w.includes(w)?350:120)};
+$('#shuf').onclick=()=>{shuffle(letters);build()};
+$('#hint').onclick=()=>{if(S.coins<45)return toast('سکه کافی نیست 🪙');const u=cur.w.filter(w=>!S.found.includes(w));if(!u.length)return;
+ const w=u[0];S.coins-=45;S.rev[w]=(S.rev[w]||0)+1;if(S.rev[w]>=w.length)got(w,0);else{save();coins();slots()}};
+function daily(){if(S.d===TODAY)return;S.s=S.d===TODAY-1?S.s+1:1;S.d=TODAY;const b=10*Math.min(S.s,7);S.coins+=b;save();
+ modal('<h2>🎁 هدیه روزانه</h2>روز '+fa(S.s)+' پشت‌سرهم<br><b>+'+fa(b)+' 🪙</b><br><small>فردا برگرد تا هدیه بزرگ‌تر بگیری!</small>','دریافت',()=>coins())}
+load();daily();
+</script></body></html>
