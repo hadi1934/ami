@@ -4,18 +4,18 @@
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none;touch-action:none}
 html,body{margin:0;height:100%;height:100dvh;background:#2a1208;font-family:Tahoma,sans-serif;color:#fff;overflow:hidden}
 #app{position:relative;z-index:1;max-width:480px;height:100%;margin:auto;display:flex;flex-direction:column;align-items:center;padding-bottom:env(safe-area-inset-bottom)}
-#top{width:100%;display:flex;justify-content:space-between;align-items:center;padding:10px 12px;font-weight:bold}
+#top{flex-shrink:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:10px 12px;font-weight:bold}
 #coin{background:linear-gradient(#ffe27a,#f0a81c);border:3px solid #fff3b8;border-radius:22px;padding:3px 14px;color:#5a2a05;box-shadow:0 3px 0 #a86a0c,0 6px 10px #0005;font-size:17px}
 #lv{background:linear-gradient(#2fb5c9,#17788a);border:3px solid #bff3fb;border-radius:12px;padding:3px 14px;font-size:14px;box-shadow:0 3px 0 #0d4c58,0 6px 10px #0005;text-shadow:0 1px 2px #0008}
-#slots{flex:1;width:100%;display:flex;flex-wrap:wrap;justify-content:center;align-content:center;gap:9px 14px;padding:0 10px;overflow:hidden}
+#slots{flex:1 1 0;min-height:60px;width:100%;display:flex;flex-wrap:wrap;justify-content:center;align-content:center;gap:9px 14px;padding:0 10px;overflow:hidden}
 .w{display:flex;direction:rtl;gap:4px}
 .c{width:34px;height:34px;border-radius:9px;background:linear-gradient(#7a3b18,#4a2009);border:2px solid #f1c86b;box-shadow:inset 0 3px 6px #0008,0 3px 0 #2b1104;display:flex;align-items:center;justify-content:center;font:bold 21px Tahoma;color:#ffe27a;text-shadow:0 2px 2px #000}
 .c.on{background:linear-gradient(#fff2b0,#f2b630);color:#5a2a05;text-shadow:none;animation:pop .35s}
 @keyframes pop{50%{transform:scale(1.3)}}
-#tag{height:38px;min-width:64px;margin:6px;padding:3px 18px;border-radius:14px;background:linear-gradient(#52d278,#26923f);border:3px solid #d8ffe3;box-shadow:0 3px 0 #145c26;font:bold 22px Tahoma;opacity:0}
+#tag{flex-shrink:0;height:38px;min-width:64px;margin:6px;padding:3px 18px;border-radius:14px;background:linear-gradient(#52d278,#26923f);border:3px solid #d8ffe3;box-shadow:0 3px 0 #145c26;font:bold 22px Tahoma;opacity:0}
 #tag.on{opacity:1}#tag.bad{background:linear-gradient(#ee6a5a,#b8321f);border-color:#ffd3cc;animation:sh .3s}
 @keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
-#plate{position:relative;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff4d6,#e6c27c 55%,#b8863f);border:9px solid #6b3a14;box-shadow:0 0 0 4px #e8b84a,0 9px 0 #3d1c07,0 16px 26px #000a,inset 0 0 36px #7a4a1a99}
+#plate{flex-shrink:0;position:relative;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff4d6,#e6c27c 55%,#b8863f);border:9px solid #6b3a14;box-shadow:0 0 0 4px #e8b84a,0 9px 0 #3d1c07,0 16px 26px #000a,inset 0 0 36px #7a4a1a99}
 #plate:before{content:"";position:absolute;inset:14px;border-radius:50%;border:3px dashed #9a6a2e;opacity:.7}
 #plate:after{content:"❖";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:64px;color:#c79a4e55}
 #plate svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
@@ -23,10 +23,10 @@ html,body{margin:0;height:100%;height:100dvh;background:#2a1208;font-family:Taho
 .l.s{background:radial-gradient(circle at 35% 30%,#fff7a8,#f5a623);color:#3a1a05;transform:scale(1.18);border-color:#fff}
 #hand{position:absolute;z-index:4;font-size:44px;display:none;pointer-events:none;margin:-8px 0 0 -14px;animation:hd 2.4s infinite}
 @keyframes hd{0%{left:var(--x0);top:var(--y0);opacity:0}12%{left:var(--x0);top:var(--y0);opacity:1}45%{left:var(--x1);top:var(--y1);opacity:1}75%{left:var(--x2);top:var(--y2);opacity:1}100%{left:var(--x2);top:var(--y2);opacity:0}}
-#bar{display:flex;gap:14px;margin:14px 0 10px}
+#bar{display:flex;gap:14px;margin:10px 0 8px;flex-shrink:0}
 button{font:bold 14px Tahoma;border:3px solid #fff0c0;border-radius:16px;padding:9px 18px;background:linear-gradient(#ffcf5c,#e8821c);color:#3a1a05;box-shadow:0 4px 0 #8a4a10,0 7px 10px #0005;touch-action:manipulation}
 button:active{transform:translateY(3px);box-shadow:0 1px 0 #8a4a10}
-#ad{min-height:50px;width:100%;text-align:center}
+#adly-container{display:none;width:100%;max-width:480px;padding:0 10px 8px;text-align:center;touch-action:manipulation;user-select:auto;flex-shrink:0;overflow:hidden}
 #ov{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:9}
 #ov.on{display:flex}
 #box{background:linear-gradient(#fff3cc,#efc66e);color:#4a2208;border:5px solid #b8742a;border-radius:24px;padding:22px 26px;text-align:center;width:82%;max-width:340px;box-shadow:0 8px 0 #6b3a14,0 14px 30px #000a;animation:pop .35s}
@@ -52,15 +52,38 @@ button:active{transform:translateY(3px);box-shadow:0 1px 0 #8a4a10}
 .bl{animation:tw .8s infinite alternate}
 #sn{position:absolute;top:52px;left:50%;transform:translateX(-50%);background:#0007;color:#fff;font-size:12px;padding:2px 12px;border-radius:10px;white-space:nowrap}
 </style><script>
-!function(e,t,n){e.yektanetAnalyticsObject=n,e[n]=e[n]||function(){e[n].q.push(arguments)},e[n].q=e[n].q||[];var a=t.getElementsByTagName("head")[0],r=new Date,c="https://cdn.yektanet.com/superscript-v2/4KVgtmjL/native-48740/yn_pub.js?v="+r.getFullYear().toString()+"0"+r.getMonth()+"0"+r.getDate()+"0"+r.getHours(),s=t.createElement("link");s.rel="preload",s.as="script",s.href=c,a.appendChild(s);var l=t.createElement("script");l.async=!0,l.src=c,a.appendChild(l)}(window,document,"yektanet");
+!function(e,t,n){e.yektanetAnalyticsObject=n,e[n]=e[n]||function(){e[n].q.push(arguments)},e[n].q=e[n].q||[];var a=t.getElementsByTagName("head")[0],r=new Date,c="https://cdn.yektanet.ir/superscript-v2/diruUGgQ/native-49263/yn_pub.js?v="+r.getFullYear().toString()+"0"+r.getMonth()+"0"+r.getDate()+"0"+r.getHours(),s=t.createElement("link");s.rel="preload",s.as="script",s.href=c,a.appendChild(s);var l=t.createElement("script");l.async=!0,l.src=c,a.appendChild(l)}(window,document,"yektanet");
 </script>
 </head><body>
 <div id="sc"><div id="st"></div><div class="sun"></div><div class="cl" style="top:110px"></div><div class="cl" style="top:190px;animation-delay:-22s"></div><div class="bd" style="top:150px;animation-delay:-8s">🕊️</div><div class="bd" style="top:230px;animation-duration:30s">🕊️</div><div id="lm"></div><div id="gr"></div><div id="sn"></div></div>
 <div id="app"><div id="top"><div id="coin">🪙 <span id="cn">0</span></div><div id="lv"></div></div>
 <div id="slots"></div><div id="tag"></div><div id="plate"><svg><polyline id="ln" fill="none" stroke="#ffd35a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/></svg><div id="hand">👆</div></div>
 <div id="bar"><button id="hint">💡 راهنما ۴۵🪙</button><button id="shuf">🔀 جابجا</button></div>
-<div id="ad"><div class="yn-bnr" id="ynpos-20924"></div></div></div>
-<!-- محل ویجت تبلیغاتی ایتا: کد ویجت را داخل div با id=ad بگذارید -->
+<div id="adly-container"></div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('adly-container');
+  if(!box)return;
+  function sync(){try{box.style.display=box.childNodes.length?'block':'none'}catch(e){}}
+  try{new MutationObserver(sync).observe(box,{childList:true,subtree:true})}catch(e){}
+  sync();
+  function start(){
+    try{
+      if(window.AdlyWidget&&typeof AdlyWidget.init==='function'){
+        AdlyWidget.init({apiKey:'c921b4064c39da1b6904873b41c0e06b',containerId:'adly-container',barnamk:'vagegardon_app',appRef:172});
+      }
+    }catch(e){}
+    sync();
+  }
+  var s=document.createElement('script');
+  s.src='https://myadino.ir/widget/adly-widget.js';
+  s.async=true;
+  s.onload=start;
+  s.onerror=sync;
+  try{document.body.appendChild(s)}catch(e){}
+})();
+</script>
 <div id="ov"><div id="box"></div></div><div id="t"></div>
 <script>
 const LV="باد|با باد ادب;آبی|آب بی آبی;دلب|دل بد لب;سرد|سر درس سرد;پای|پا یا پی;ماه|ما هم ماه;روز|رو ور روز;شبن|شب بن شن;دریا|یاد دریا دیار;رود|رود دور درو;خانه|نه نخ خانه;دره|در ده دره;نمک|من نم نمک;ماست|تا اسم ماست;دوست|تو دست دوست;مادر|امر مار مادر;دختر|خرد دختر درخت;پسر|پر پسر سپر;کتاب|کت بت کتاب;مددا|داد دام مداد;ممعل|علم عمل معلم;قطار|را طاق قطار;کشتی|تشک کشت کشتی;کوچه|چه کوه کوچه;زمین|میز زین زمین;ماهی|مه می ماهی;گربه|بره برگ گربه;سگم|سگ مس مگس;اوم|او مو وام;ازر|از راز ارز;برت|بر تر تبر;جاو|جا جو اوج;خری|خر یخ خیر;دوی|دو دی وی;دمک|دم کم کمد;زنو|زن نو وزن;هرن|هر نهر هنر;رزد|رز زد زرد;خطر|خط رخ خطر;آینه|آن آهن آینه;آشنا|آش شنا آشنا;جنگل|گل جنگ جنگل;سبزه|سه سبز سبزه;کویر|یک روی کویر;بهار|راه ابر بهار;شاخه|شاخ شاه شاخه;ریشه|شیر شهر ریشه;نرگس|سنگ رنگ نرگس;سیب|سی سیب;بازو|بز باز بازو;قلم|قم قلم;شدا|شد شاد;نیت|نی تن;ارث|ارث اثر;ننام|نان امن نام;باغل|باغ بال بغل;دیوار|رویا دیوار رادیو;باارن|انار باران انبار;برفت|تب برف رفت;چایر|چای یار چرا رای;قندش|قند شدن نقش;پدری|پدر پیر دیر;برراد|برد بار دار برادر;خواهر|خار هوا خواهر;مدرسه|مهر رمه همسر مدرسه;ماشین|میش ماشین نمایش;ستاره|تار ترس ستاره;مرغک|مرغ کرم کمر;اسبل|اسب سال بلا لباس;بومد|بوم بود بدو دوم;بیدن|بید بدن بند بدی;تپهل|پل تپه پله تله;خاکش|خاک کاخ اشک خشک;برقو|برق ورق برو بوق;زاگرس|رگ ساز گراز زاگرس;کارون|کار نوک روان کارون;دامنه|دهان دامن دانه دامنه;دلفین|دف فیل دین دلفین;شتری|شتر تیر رشت ترشی;پرستو|توپ تور پوست پرستو;ایلس|ایل سیل یاس;آردم|آرد آمد آدم;چاهر|چاه چاره چهار;دشته|دشت شهد هشت;مهتاب|بام تابه مهتاب;قلهو|قو قله هلو;شکوفه|کفش هوش شکوفه;بنفشه|بنفش شنبه بنفشه;شققای|قاشق قایق شقایق;پیلک|پیل پلک پیک;خرسب|خرس سرب خبر;خرگوش|گوش خوش خرگوش;غازر|غاز غار زاغ;سنجاب|جان بنا سنجاب;ددننا|دان دادن دندان;پنجره|رنج پنج پنجه پنجره;انگشت|تنگ گشت انگشت;عسلک|عسل عکس;سقفر|سقف سفر فرق قفس;بچهد|بچه بده;شمعر|شمع عمر شعر;آسمان|آسان آسمان;فرشا|فرش شفا فشار;قفلا|قفل افق فال;گاوی|گاو گوی;اصلد|اصل صدا;آهون|آهو نوه;یخچال|خالی خیال یخچال;آبشار|بشر آبشار;خورشید|دوش خورد خرید خورشید;آرامگ|گرم گام آرام گرما;چشمهک|شکم چشمه چکمه چشمک;ببیاان|بیا بابا ببین بیابان;گیاهس|گاه گیاه سیاه سایه;ارکیده|کارد اردک دایره ارکیده;کلاغش|شال الک شکل کلاغ;گوزنب|بگو بزن زنگ گوزن;عقربد|رعد بعد قدر عقرب;لاکپشت|پاک تلاش شکلات لاکپشت;زانوم|موز زانو نماز زمان;سینهک|سکه کهن سینه کیسه;گردنک|کند کرد گردن کردن;سفرهک|کره فکر سفره سرکه;سماور|سرما راسو سمور سوار سماور;انجیر|جای جیر نجار انجیر;برنجم|برج نرم برنج منبر;خرمای|میخ خرما خیار خیام;آزادی|یزد آزاد آزادی;سبزیا|سبزی زیبا بساز بازی;آرزوی|یوز آری آرزو;ساحلن|لحن ساحل سالن;للاهن|لاله لانه نهال;میوهت|تیم میوه هویت;خروسب|خوب خروس بخور;عقابل|قلب عقل عقاب;پروانه|پاره پناه پروانه;مرغابی|بیم مربا مرغابی;بیینک|یکی بینی نیکی;چانهم|چمن چانه نامه;شاننه|شانه نشان نشانه;ابرون|ابرو انبر بانو;حیاطر|طرح حیاط طراح;کاسهو|سکو کاسه کاهو;قورین|قوی قوری نیرو;کتریش|شکر کتری تشکر;پستهش|پشه پشت پسته;ککوود|کدو کوکو کودک;گردوی|ریگ دیگ گردو;بستنی|بست بستن بستنی;گوجهر|گوجه جوهر گروه;قارچن|چاق قارچ چنار;پیراهن|پنیر پایه پیراهن;دانشجو|جشن جوان دانش دانشجو;خانمک|خنک خانم کمان;پررستا|پاس پارس پرستار;کشاورز|ورزش شکار کشور کشاورز;آهننگ|آهنگ نهنگ;ببللی|بیل بلبل;شبنمو|موش شبنم;صخرهب|صبر صخره;قصابر|قصر رقص قصاب;پاییز|پیاز پاییز;تتخهس|تخت سخت تخته خسته;جوابم|موج جام جواب;زرافهد|هدف فردا دراز رفاه زرافه;بلدرچین|بردن دلیر دلبر بلندی بلدرچین;شاهیند|دنیا شادی شنید شاهین اندیشه;ااستخون|ساخت خواست ساختن خواستن استخوان;گیلاسم|سیم سالم سلام گلیم گیلاس;میدانت|تند مدت امید میدان امنیت;روستان|تنور توان ستون روستا سنتور;امروزه|رمز مزه موزه روزه امروز;ددیروز|دید درد دزد دوید دیروز;عدالتم|دعا ملت مدال عدالت علامت;لبخندت|نخل تلخ بخند تنبل لبخند;خوردنا|خدا خون خوردن خواند دوران;گلدانر|گران لنگر گارد گلدان;زیتونش|تیز زشت نوشت زیتون;دستکشب|سبد بکش شکست دستکش;ممهانر|مهم نمره مهمان مناره;گرفتن|گفت رفتن گفتن گرفت تفنگ گرفتن;باازرن|زبان بازار ارزان ابزار;کوتاهل|تکه کلاه توله کوتاه;نزدیکه|زدن زنده نیزه نزدیک;خاطرهل|طلا خاله خاطر خاطره;ددوینب|دود بودن دیدن دویدن;اایستدن|استاد ایستاد داستان ایستادن;جزیرهو|هویج جزوه جزیره;البرزگ|بزرگ گلاب البرز;مورچهت|چتر مترو مورچه;ریسمان|سیر رسم نسیم ریسمان;قناریش|نقاش قناری نقاشی;عروسکی|سریع عروس عروسک عروسی;قورباغه|غروب روباه قورباغه;چنگالی|چین چنگال گیلان;ممجسهل|جمله جلسه مجله مجسمه;فننجات|تاج جفت فنجان;شلوارم|شمال شلوار مشاور;تاریکب|تاریک باتری تبریک;سرنوشت|روشن نشست سرنوشت;ترانهش|تنها رشته ترانه تهران;بخوانن|ناخن خواب بخوان;فرمانس|فارس فرمان مسافر;پرندهب|بپر پرده پرنده;آفتابه|هفت آفتاب;آیینده|آیین آینده;طوفانل|لطف طوفان;باغچهن|غنچه باغچه;صورتتی|توت صورت صورتی;کبوترن|تنبک کبوتر;فردوسی|سفید رسید فردوسی;گنجشکا|کاج گنجشک;ممیونل|لیمو میمون;زنبوور|زنبور نوروز;طاووسل|سوال طاووس;صندلیا|صدای صندلی;پاتیلو|پول پاتیل;تبریزم|بزم ترمز تبریز;کرماند|دکان کرمان درمان;مهربانک|بانک مبارک همکار مهربان برنامه;فوتبالن|تلفن بالن تابلو توفان فوتبال;مااکرونی|ایمان ایران ایوان ماکارونی;ااحترمم|حرم تمام حمام احترام;اافتخرب|بخت بخار اخبار افتخار;قهرمانل|نقره لقمه مقاله قهرمان;ننارجیگ|نگین نارنج رنگین نارنجی;بازیگرت|بگیر گیتار زیارت بازیگر;دستمالو|سواد تولد سلامت دستمال;شمعدانی|عید دشمن معنی شمعدان;پایتتخم|تخم پخت پیام پایتخت;آشپزخانه|پخش خزان آشپزخانه;ککمربند|کبک کمک کمربند;خوودکار|خودرو خوراک خودکار;دوچرخها|چرخ چادر دوچرخه;اافتدنر|دفتر افتاد افتادن;سررگمید|مدیر سرگرم سرگرمی;مسابقهد|قدم ساده مسابقه;ااصفهنل|صف فاصله اصفهان;خوشحاله|حلوا خوشه خوشحال;پهلوانگ|گله پلنگ پهلوان;شاامگهد|مشهد ادامه شامگاه;نیمروزس|سوزن نیمروز سرزمین;فیروزهک|کیف کوزه فیروزه;موسییقت|قیمت تقویم موسیقی;اارتفعس|ساعت سرعت ارتفاع;فعالیتم|علف عالی فیلم فعالیت عملیات;ااشتبهل|بالش بهشت اشتباه;ااعتمدب|بادام ابتدا اعتماد;انگشترو|گوشت انگور انگشتر;ببسکتال|کباب کلاس بسکتبال;بینندهش|شنیدن بنشین بیننده;جشنواره|جهان جانور جشنواره;ددیگاهه|هدیه هدهد دیدگاه;ساازمنل|منزل الماس سازمان;یاادگرش|گردش شاگرد یادگار;زمستانه|تازه زمستان;ددماونس|دماوند سودمند;نیلوفرا|لیوان نیلوفر;عنکبوتی|عینک عنکبوت;پییشانر|شیرین پیشانی;کتاابخنه|انتخاب کتابخانه;نوشابهه|بهانه نوشابه;پرتقاال|اتاق پرتقال;رانندهش|هشدار راننده;اامتحنش|تماشا امتحان;اتووبسن|اتوبوس بوستان;پییروزا|پرواز پیروزی;خواانند|نانوا خواندن;بباادنر|ببر بادبان;رااینهم|رایانه راهنما;ننردبای|بیدار نردبان;کمانچهی|کیهان کمانچه;خاکستری|تاریخ خاکستری;گلستانش|شانس گلستان;خخوشبتم|خشم خوشبخت;ببااغنی|باغبان باغبانی;گوسفندا|فانوس گوسفند;رودخانه|خنده رودخانه;آموزگار|آواز آموزگار;آللباوه|لوله آلبالو;اافسنهی|سفینه افسانه;اانتظره|ظهر انتظار;ااندزهو|اهواز اندازه;بازیکنن|بنزین بازیکن;خدااحفظ|حافظ خداحافظ;دستگاهی|سادگی دستگاه;زیییباد|دایی زیبایی;سااختمن|نخست ساختمان;فروشگاه|فروش فروشگاه;قابلمهی|قالی قابلمه;ککنجاوی|کیک کنجکاو;ههمانگد|گندم هماهنگ;ههمسایر|سیاره همسایه;جمعهولتدشسکب|عمو عمه مسجد جعبه;جمعهلتش|جمع جهت مشعل جمعه;سحروتک|سحر روح حسرت حرکت;جغدول|دوغ جغد جلو جدول;حلقهم|حلق حلقه محله;عصراش|عصر عصا شاعر;خزرمد|خزر زخم زمرد".split(";").map(s=>{const[a,b]=s.split("|");return{l:[...a],w:b.split(" ")}});
@@ -81,7 +104,7 @@ let cur,letters,path=[],pos=[],R=0;
 const plate=$('#plate');
 function coins(){$('#cn').textContent=fa(S.coins)}
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function build(){plate.querySelectorAll('.l').forEach(e=>e.remove());R=Math.min(290,innerWidth-24,innerHeight*.38);plate.style.width=plate.style.height=R+'px';
+function build(){plate.querySelectorAll('.l').forEach(e=>e.remove());R=Math.min(290,innerWidth-24,Math.max(170,innerHeight*.34));plate.style.width=plate.style.height=R+'px';
  const n=letters.length,rad=R/2-42;pos=letters.map((c,i)=>{const a=-Math.PI/2+i*2*Math.PI/n;return [R/2-6+rad*Math.cos(a),R/2-6+rad*Math.sin(a)]});
  letters.forEach((c,i)=>{const e=document.createElement('div');e.className='l';e.textContent=c;e.style.left=pos[i][0]+'px';e.style.top=pos[i][1]+'px';plate.appendChild(e)});handHint()}
 function confetti(){for(let i=0;i<30;i++){const s=document.createElement('div');s.className='cf';s.textContent=['🎉','✨','⭐','🪙','🎊'][i%5];s.style.left=Math.random()*100+'vw';s.style.animationDelay=Math.random()*.6+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),3200)}}
@@ -115,6 +138,5 @@ $('#hint').onclick=()=>{if(S.coins<45)return toast('سکه کافی نیست �
  const w=u[0];S.coins-=45;S.rev[w]=(S.rev[w]||0)+1;if(S.rev[w]>=w.length)got(w,0);else{save();coins();slots()}};
 function daily(){if(S.d===TODAY)return;S.s=S.d===TODAY-1?S.s+1:1;S.d=TODAY;const b=10*Math.min(S.s,7);S.coins+=b;save();
  modal('<h2>🎁 هدیه روزانه</h2>روز '+fa(S.s)+' پشت‌سرهم<br><b>+'+fa(b)+' 🪙</b><br><small>فردا برگرد تا هدیه بزرگ‌تر بگیری!</small>','دریافت',()=>coins())}
-try{const a=$('#ynpos-20924');if(a){new MutationObserver(()=>{$('#ad').style.display=a.children.length?'':'none'}).observe(a,{childList:true});setTimeout(()=>{if(!a.children.length)$('#ad').style.display='none'},8000)}}catch(e){}
 load();daily();
 </script></body></html>
